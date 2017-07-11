@@ -167,6 +167,8 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 1)];
+    self.tableView.refreshControl = [[UIRefreshControl alloc] init];
+    [self.tableView.refreshControl addTarget:self action:@selector(reloadData) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:self.tableView];
 }
 
@@ -238,6 +240,8 @@
         
 //        NSLog(@"self.arrayOfCellHeights.count: %d", self.arrayOfCellHeights.count);
 //        NSLog(@"self.dataSourceArray.count: %d", self.dataSourceArray.count);
+        
+        [self.tableView.refreshControl endRefreshing];
         [self.tableView reloadData];
         
         [MBProgressHUD hideHUDForView:self.view animated:YES];
@@ -246,6 +250,7 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"API failed, error: %@", error);
         
+        [self.tableView.refreshControl endRefreshing];
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -275,6 +280,20 @@
         [cell setIntroductionLabelText:attraction.introduction];
         [self.arrayOfCellHeights addObject:@(CGRectGetMaxY(cell.introductionLabel.frame) + 20)];
     }    
+}
+
+- (void)reloadData {
+    
+    if (isGettingAPIData) {
+        return;
+    }
+    
+    maxDataCount = -1;
+    [self.dataSourceArray removeAllObjects];
+    [self.arrayOfCellHeights removeAllObjects];
+    [self.tableView reloadData];
+    
+    [self getAPIData];
 }
 
 @end
