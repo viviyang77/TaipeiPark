@@ -24,7 +24,7 @@
 @property (strong, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *dataSourceArray;
 @property (strong, nonatomic) NSMutableArray *arrayOfCellHeights;
-
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
 @end
 
 @implementation ViewController
@@ -167,8 +167,11 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 1)];
-    self.tableView.refreshControl = [[UIRefreshControl alloc] init];
-    [self.tableView.refreshControl addTarget:self action:@selector(reloadData) forControlEvents:UIControlEventValueChanged];
+    
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(reloadData) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:self.refreshControl];
+    
     [self.view addSubview:self.tableView];
 }
 
@@ -241,7 +244,7 @@
 //        NSLog(@"self.arrayOfCellHeights.count: %d", self.arrayOfCellHeights.count);
 //        NSLog(@"self.dataSourceArray.count: %d", self.dataSourceArray.count);
         
-        [self.tableView.refreshControl endRefreshing];
+        [self.refreshControl endRefreshing];
         [self.tableView reloadData];
         
         [MBProgressHUD hideHUDForView:self.view animated:YES];
@@ -250,7 +253,7 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"API failed, error: %@", error);
         
-        [self.tableView.refreshControl endRefreshing];
+        [self.refreshControl endRefreshing];
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
