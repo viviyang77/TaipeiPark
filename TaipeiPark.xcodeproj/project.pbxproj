@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BF11EF2884FF09AA946DBBC /* libPods-TaipeiPark.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B913D7FA92E1784B3457275F /* libPods-TaipeiPark.a */; };
 		44F4C26C1F14EE110065873D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F4C26B1F14EE110065873D /* main.m */; };
 		44F4C26F1F14EE110065873D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F4C26E1F14EE110065873D /* AppDelegate.m */; };
 		44F4C2721F14EE110065873D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F4C2711F14EE110065873D /* ViewController.m */; };
-		44F4C2751F14EE110065873D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44F4C2731F14EE110065873D /* Main.storyboard */; };
 		44F4C2771F14EE110065873D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44F4C2761F14EE110065873D /* Assets.xcassets */; };
 		44F4C27A1F14EE110065873D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44F4C2781F14EE110065873D /* LaunchScreen.storyboard */; };
+		44F4C2871F14F58B0065873D /* TaipeiParkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F4C2861F14F58B0065873D /* TaipeiParkTableViewCell.m */; };
+		44F4C28A1F14F9B40065873D /* AttractionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F4C2891F14F9B40065873D /* AttractionData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,10 +24,16 @@
 		44F4C26E1F14EE110065873D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		44F4C2701F14EE110065873D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		44F4C2711F14EE110065873D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		44F4C2741F14EE110065873D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44F4C2761F14EE110065873D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44F4C2791F14EE110065873D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44F4C27B1F14EE110065873D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44F4C2851F14F58B0065873D /* TaipeiParkTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaipeiParkTableViewCell.h; sourceTree = "<group>"; };
+		44F4C2861F14F58B0065873D /* TaipeiParkTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaipeiParkTableViewCell.m; sourceTree = "<group>"; };
+		44F4C2881F14F9B40065873D /* AttractionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttractionData.h; sourceTree = "<group>"; };
+		44F4C2891F14F9B40065873D /* AttractionData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttractionData.m; sourceTree = "<group>"; };
+		7ECAD43F5EFA4685DB9853F4 /* Pods-TaipeiPark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaipeiPark.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaipeiPark/Pods-TaipeiPark.release.xcconfig"; sourceTree = "<group>"; };
+		9A50E9ABA808EE813B7127DE /* Pods-TaipeiPark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaipeiPark.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaipeiPark/Pods-TaipeiPark.debug.xcconfig"; sourceTree = "<group>"; };
+		B913D7FA92E1784B3457275F /* libPods-TaipeiPark.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TaipeiPark.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BF11EF2884FF09AA946DBBC /* libPods-TaipeiPark.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FD69833717969F64B42DDD5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B913D7FA92E1784B3457275F /* libPods-TaipeiPark.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		44F4C25E1F14EE110065873D = {
 			isa = PBXGroup;
 			children = (
 				44F4C2691F14EE110065873D /* TaipeiPark */,
 				44F4C2681F14EE110065873D /* Products */,
+				7F489AC15F3D85BC5F81468C /* Pods */,
+				1FD69833717969F64B42DDD5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,9 +79,9 @@
 			children = (
 				44F4C26D1F14EE110065873D /* AppDelegate.h */,
 				44F4C26E1F14EE110065873D /* AppDelegate.m */,
-				44F4C2701F14EE110065873D /* ViewController.h */,
-				44F4C2711F14EE110065873D /* ViewController.m */,
-				44F4C2731F14EE110065873D /* Main.storyboard */,
+				44F4C2831F14F5550065873D /* Controller */,
+				44F4C2821F14F5500065873D /* View */,
+				44F4C2811F14F54A0065873D /* Model */,
 				44F4C2761F14EE110065873D /* Assets.xcassets */,
 				44F4C2781F14EE110065873D /* LaunchScreen.storyboard */,
 				44F4C27B1F14EE110065873D /* Info.plist */,
@@ -79,6 +98,42 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		44F4C2811F14F54A0065873D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				44F4C2881F14F9B40065873D /* AttractionData.h */,
+				44F4C2891F14F9B40065873D /* AttractionData.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		44F4C2821F14F5500065873D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				44F4C2851F14F58B0065873D /* TaipeiParkTableViewCell.h */,
+				44F4C2861F14F58B0065873D /* TaipeiParkTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		44F4C2831F14F5550065873D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				44F4C2701F14EE110065873D /* ViewController.h */,
+				44F4C2711F14EE110065873D /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7F489AC15F3D85BC5F81468C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A50E9ABA808EE813B7127DE /* Pods-TaipeiPark.debug.xcconfig */,
+				7ECAD43F5EFA4685DB9853F4 /* Pods-TaipeiPark.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +141,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44F4C27E1F14EE110065873D /* Build configuration list for PBXNativeTarget "TaipeiPark" */;
 			buildPhases = (
+				002AFC860A0E160EA9C313CD /* [CP] Check Pods Manifest.lock */,
 				44F4C2631F14EE110065873D /* Sources */,
 				44F4C2641F14EE110065873D /* Frameworks */,
 				44F4C2651F14EE110065873D /* Resources */,
+				B56255516D63A50FE8AB6EA4 /* [CP] Embed Pods Frameworks */,
+				1173005E38316DA5139DD0AA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,11 +198,58 @@
 			files = (
 				44F4C27A1F14EE110065873D /* LaunchScreen.storyboard in Resources */,
 				44F4C2771F14EE110065873D /* Assets.xcassets in Resources */,
-				44F4C2751F14EE110065873D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		002AFC860A0E160EA9C313CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1173005E38316DA5139DD0AA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaipeiPark/Pods-TaipeiPark-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B56255516D63A50FE8AB6EA4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaipeiPark/Pods-TaipeiPark-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		44F4C2631F14EE110065873D /* Sources */ = {
@@ -152,6 +257,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				44F4C2721F14EE110065873D /* ViewController.m in Sources */,
+				44F4C2871F14F58B0065873D /* TaipeiParkTableViewCell.m in Sources */,
+				44F4C28A1F14F9B40065873D /* AttractionData.m in Sources */,
 				44F4C26F1F14EE110065873D /* AppDelegate.m in Sources */,
 				44F4C26C1F14EE110065873D /* main.m in Sources */,
 			);
@@ -160,14 +267,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		44F4C2731F14EE110065873D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				44F4C2741F14EE110065873D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		44F4C2781F14EE110065873D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -271,10 +370,12 @@
 		};
 		44F4C27F1F14EE110065873D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A50E9ABA808EE813B7127DE /* Pods-TaipeiPark.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 787AZMF5KM;
 				INFOPLIST_FILE = TaipeiPark/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.viviyang.TaipeiPark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -283,10 +384,12 @@
 		};
 		44F4C2801F14EE110065873D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7ECAD43F5EFA4685DB9853F4 /* Pods-TaipeiPark.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 787AZMF5KM;
 				INFOPLIST_FILE = TaipeiPark/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.viviyang.TaipeiPark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -312,6 +415,7 @@
 				44F4C2801F14EE110065873D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
